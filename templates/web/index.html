@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../../static/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+        
+            <div class="left">
+                <img src="{% static '../../static/images/logo.png' %}" alt="image">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="{% url 'posts:order_food' %}">
+                        order
+                    </a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'users:logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'users:login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="">sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="spotlight">
+            <div class="left">
+                <div class="order">
+                    <ul>
+                        <li>
+                            <div>
+                                 <img src="{% static '../../static/images/biriyani.jpg' %}" alt="">
+                             </div>
+                             <div class="items">
+                                <h5><a href="">Category</a></h5>
+                                <h5><a href="">Item</a></h5>
+                                <h5><a href="">student</a></h5>
+                                <h5><a href="">price</a></h5>
+                             </div>
+                             
+                        </li>
+                        <li>
+                            <div>
+                                 <img src="{% static '../../static/images/biriyani.jpg' %}" alt="">
+                             </div>
+                             <div class="items">
+                                <h5><a href="">Category</a></h5>
+                                <h5><a href="">Item</a></h5>
+                                <h5><a href="">student:sana</a></h5>
+                                <h5><a href="">price</a></h5>
+                            </div>
+                             
+                        </li>
+                         
+                        <li>
+                            <div>
+                                 <img src="{% static '../../static/images/biriyani.jpg' %}" alt="">
+                             </div>
+                             <div class="items">
+                                <h5><a href="">Category</a></h5>
+                                <h5><a href="">Item</a></h5>
+                                <h5><a href="">student:sana</a></h5>
+                                <h5><a href="">price</a></h5>
+                            </div>
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+            
+        </section>
+    </section>
+</body>
+</html>

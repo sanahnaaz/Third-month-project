@@ -95,10 +95,13 @@ header div.right ul {
 
 header div.right ul li { 
     margin-right: 20px;
+    background: #5555f7;
+    border-radius: 15px;
+    padding: 13px 25px;
 }
 
 header div.right ul li a { 
-
+    color: #fff;
 }
 section#spotlight { 
     display: flex;
@@ -148,8 +151,4 @@ section#spotlight div.left div.order ul li div.items h5 {
 section#spotlight div.left div.order ul li div.items h5 a { 
     font-size: px;
 
-}
-
-section#spotlight div.right { 
-    width: 20%;
 }
